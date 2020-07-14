@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Jul 12, 2020 at 06:37 AM
+-- Generation Time: Jul 15, 2020 at 12:11 AM
 -- Server version: 5.7.29-0ubuntu0.18.04.1
 -- PHP Version: 5.6.40-26+ubuntu18.04.1+deb.sury.org+1
 
@@ -115,7 +115,7 @@ CREATE TABLE `M_Setupprofile` (
 --
 
 INSERT INTO `M_Setupprofile` (`SetupprofileID`, `SetupTitle`, `SetupName`, `SetupDescription`, `SetupImageDasbor`, `SetupImage`, `SetupImageLogo`, `IsActive`, `EntryBy`, `EntryDate`, `LastUpdateBy`, `LastUpdateDate`) VALUES
-(3, 'SavStudent', 'Aplikasi Tabungan Siswa', 'Aplikasi Untuk Mencatat Tabungan Siswa', 'N', 'logo-tutwuri-handayani-ardi-madi-blog-11.png', 'tut-wuri-handayani-tut-wurihandayani-mayor-of-surabaya-blue-png-tut-wuri-handyani-728_550.jpg', 'Y', 'brian', '2020-07-02 23:51:58', 'brian', '2020-07-12 05:56:41');
+(3, 'SavStudent', 'Aplikasi Tabungan Siswa', 'Aplikasi Untuk Mencatat Tabungan Siswa', 'Y', 'logo-tutwuri-handayani-ardi-madi-blog-11.png', 'logo-tutwuri-handayani-ardi-madi-blog-11.png', 'Y', 'brian', '2020-07-02 23:51:58', 'brian', '2020-07-13 23:25:16');
 
 -- --------------------------------------------------------
 
@@ -177,14 +177,8 @@ CREATE TABLE `M_User` (
 --
 
 INSERT INTO `M_User` (`AdminID`, `AdminName`, `DateOfBirth`, `email`, `UserName`, `Password`, `SuperUser`, `AdminImage`, `IsActive`, `EntryBy`, `EntryDate`, `LastUpdateBy`, `LastUpdateDate`) VALUES
-(1, 'inf', '1990-10-12', 'inf@gmail.com', 'inf', 0x6565376236333039393565376133366236343230363936393839343431653264, 'N', 'flat-icon-4.png', 'Y', 'admin', '2020-01-10 16:29:57', 'brian', '2020-06-07 17:10:06'),
-(2, 'abrian Inf', '1994-10-10', 'abriantama.inf@gmail.com', 'brian', 0x6362643434663862356234386135316637646162393861626364663435643465, 'Y', 'Screenshot_from_2020-07-03_00-56-331.png', 'Y', 'admin', '2020-01-10 16:37:32', 'brian', '2020-07-04 10:34:53'),
-(3, 'tama adi', '2020-03-16', 'tama@gmail.com', 'tama', 0x3430376230353666356536313937613934386237663833363536376662363364, 'N', 'flat-icon-4.png', 'Y', 'brian', '2020-03-16 16:47:50', 'tama', '2020-03-19 22:39:18'),
-(4, 'dewi', '2020-03-16', 'dewi@gmail.com', 'dewi', 0x6564316438353963353032363237303164393265356362663339363532373932, 'N', '', 'Y', 'brian', '2020-03-16 16:51:03', 'brian', '2020-03-16 16:51:03'),
-(5, 'afiyah', '1998-02-01', 'afiyah.efi@gmail.com', 'efi', 0x6139353835656532366239396230326664313934363539303266326664346435, 'N', '', 'N', 'brian', '2020-05-08 17:08:32', 'brian', '2020-05-08 17:10:00'),
-(6, 'efira', '1994-02-01', 'efivara.steel@gmail.com', 'efi', 0x6139353835656532366239396230326664313934363539303266326664346435, 'N', '', 'Y', 'brian', '2020-05-09 15:01:43', 'brian', '2020-05-09 15:01:43'),
-(7, 'wito', '1990-10-12', 'inf@gmail.com', 'wito', 0x3130393530643633643939376664353338376663313532376564636434306239, 'N', '', 'Y', 'brian', '2020-06-07 17:19:47', 'brian', '2020-06-07 17:19:47'),
-(8, 'tester', '2020-07-01', 'tester.xxx@gmail.com', 'tester', 0x3832376363623065656138613730366334633334613136383931663834653762, 'N', 'Screenshot_from_2020-07-03_00-56-33.png', 'Y', 'brian', '2020-07-03 00:51:00', 'tester', '2020-07-03 00:56:41');
+(2, 'abrian Inf', '1994-10-10', 'abriantama.inf@gmail.com', 'brian', 0x6362643434663862356234386135316637646162393861626364663435643465, 'Y', 'cs2.png', 'Y', 'admin', '2020-01-10 16:37:32', 'brian', '2020-07-13 23:23:54'),
+(6, 'efira', '1994-02-01', 'efivara.steel@gmail.com', 'efi', 0x6139353835656532366239396230326664313934363539303266326664346435, 'N', 'cs1.png', 'Y', 'brian', '2020-05-09 15:01:43', 'efi', '2020-07-15 00:11:03');
 
 -- --------------------------------------------------------
 

@@ -16,17 +16,41 @@
       if(file_exists("./upload/profile/".$settl->SetupImage)){
         $imgurl = base_url()."upload/profile/".$settl->SetupImage;
         $title  = '<div class="clearfix mb-2"></div>';
-        $title .= "<img src='".$imgurl."' alt='logo' width='120' height='60' class='img-responsive'>";
+        $title .= "<img src='".$imgurl."' alt='logo' width='50' height='50' class='img-responsive'>&nbsp;";
+        $title .= $settl->SetupTitle;
         $title .= '<div class="clearfix mb-3"></div>';
       }
       else{
         $imgurl = base_url()."upload/profile/default.jpeg";
         $title  = '<div class="clearfix mb-2"></div>';
-        $title .= "<img src='".$imgurl."' alt='logo' width='120' height='60' class='img-responsive'>";
+        $title .= "<img src='".$imgurl."' alt='logo' width='50' height='50' class='img-responsive'>&nbsp;";
+        $title .= $settl->SetupTitle;
         $title .= '<div class="clearfix mb-3"></div>';
       }
     }
   }
+
+
+  //image user
+    $img = "";
+    $query = $this->db->query(" SELECT  AdminImage 
+                                FROM    M_User
+                                WHERE   UserName ='".$this->session->userdata('nama')."'
+                                      ");
+    if ($query->num_rows() > 0) {
+      $arr = $query->first_row();
+      $img = $arr->AdminImage;
+               //echo $doc;
+    }
+
+      $urlimg = (trim($img) == "") ? "default.jpeg" : $img;
+      $locate = "./upload/user/".$urlimg;
+      if(file_exists($locate)){
+        $image = base_url()."upload/user/".$urlimg;
+      }
+      else{
+        $image = base_url()."upload/user/default.jpeg";
+      }
   
 
   ?>
@@ -107,7 +131,7 @@
           
           
           <li class="dropdown"><a href="#" data-toggle="dropdown" class="nav-link dropdown-toggle nav-link-lg nav-link-user"> 
-            <img alt="image" src="<?php echo base_url(); ?>/stisla-master/assets/img/avatar/avatar-1.png" class="rounded-circle mr-1">
+            <img alt="image" src="<?php echo $image; ?>" class="rounded-circle mr-1">
             <div class="d-sm-none d-lg-inline-block"><?php echo $this->session->userdata('nama');?></div></a>
             <div class="dropdown-menu dropdown-menu-right">
               <!-- <div class="dropdown-title">Logged in 5 min ago</div> -->
